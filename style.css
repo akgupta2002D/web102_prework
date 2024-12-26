@@ -1,37 +1,124 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 
+
+/* #### Background Styling ####
+   - Added a subtle gradient to reflect the ocean/sea theme.
+   - Colors chosen to give a calm and engaging feel.
+*/
+/* #### Clean Gradient Background ####
+   - A modern gradient background for a calm and professional appearance.
+   - Lightens the top section and deepens the bottom for depth.
+*/
 body {
-    font-family: 'Cabin';
-    background-color: #758190;
+    background: white; /* Light teal to dark blue */
+    color: #000; /* Use a darker text color for better contrast */
+    font-family: 'Cabin', sans-serif; /* Clean and modern font family */
+    margin: 0;
+    padding: 0;
+}
+
+/* #### Header Styling ####
+   - Update header to match the clean background.
+   - Use a slight gradient for consistency.
+*/
+.header {
+    display: flex;
+    background: linear-gradient(to right, #80d0c7, #1b486a); /* Subtle horizontal gradient */
+    padding: 1%;
+    align-items: center;
+    margin: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    color: #fff; /* White text for contrast */
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+h2{
+    text-align: center;
+    font-size: 36px;
+}
+
+/* #### Glowing Line Styling ####
+   - Creates a small glowing line beneath the heading.
+   - Center-aligned with margins for spacing.
+   - Uses box-shadow for a glowing effect.
+*/
+.glowing-line {
+    width: 50%; /* Set the line width */
+    height: 2px; /* Set the line height */
+    margin: 10px auto; /* Center the line with spacing */
+    background-color: #235b7c; /* Set the line color */
+    border-radius: 2px; /* Rounded edges for the line */
+    box-shadow: 0 0 10px #13547a, 0 0 20px #13547a; /* Glowing effect */
+    margin-bottom: 20px;
+}
+/* #### Description Container ####
+   - Centralize and improve readability for the introductory text.
+*/
+#description-container {
+    font-size: 24px; /* Bigger, easy-to-read font size */
+    text-align: center; /* Center align text */
+    margin: 20px auto; /* Add spacing around the container */
+    width: 80%; /* Ensure proper layout control */
+    line-height: 1.8; /* Space out lines for readability */
+    color: #1b486a; /* A deeper, ocean-inspired text color */
 }
 
 #tentacles {
     width: 50px;
 }
 
-.header {
-    display: flex;
-    background-color: lightblue;
-    padding: 1%;
-    align-items: center;
-    margin-left: -10px;
-    margin-right: -10px;
-    margin-top: -10px;
-}
+
 
 .stats-container {
     display: flex;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 15px lightblue;
+    padding: 1% 5%;
+    
+
 }
 
-.stats-card {
+/* .stats-card {
     background-color: #a8b0bc;
     border-radius: 7px;
     padding: 1%;
     margin: 1%;
     width: 100%;
     text-align: center;
+} */
+
+/* #### Updated Stats Cards Styling ####
+   - Updates colors to match the original header theme.
+   - Ensures fixed size without altering the existing structure.
+*/
+.stats-card {
+    background: linear-gradient(to right, #80d0c7, #1b486a); /* Match header gradient */
+    border-radius: 7px; /* Smooth rounded corners */
+    width: 100%;
+    padding: 2%;
+    margin: 3%;
+    height: 150px; /* Fixed height */
+    text-align: center; /* Center-align content */
+    padding: 20px; /* Ensure spacing inside the card */
+    color: #fff; /* White text for readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+    margin: 10px; /* Space between cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
+/* #### Stats Cards Hover Effect ####
+   - Add slight scale and shadow for hover interaction.
+*/
+.stats-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Intensify shadow on hover */
+}
+
+.games_container_text{
+    text-align: center;
+}
 #num-contributions, #total-raised, #num-games {
     font-size: 50px;
 }
@@ -55,6 +142,7 @@ body {
     width: 300px;
     text-align: center;
     border-radius: 7px;
+    border: 2px solid #1b486a;
 }
 
 .game-card:hover {
@@ -72,4 +160,29 @@ button {
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+    background:#1b486a;
+    color: white;
+}
+
+/* #### Search Bar Styling ####
+   - Styles the input field for searching games.
+*/
+#search-container {
+    text-align: center; /* Center-align the search bar */
+    margin: 20px auto; /* Add spacing above and below */
+}
+
+#search-bar {
+    width: 60%; /* Adjust width to fit nicely */
+    padding: 10px; /* Add padding for better usability */
+    border: 2px solid #80d0c7; /* Match border color to site theme */
+    border-radius: 5px; /* Rounded edges */
+    font-size: 16px; /* Readable text size */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#search-bar:focus {
+    border-color: #1b486a; /* Darken border on focus */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on focus */
 }
